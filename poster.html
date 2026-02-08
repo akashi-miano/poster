@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FYP Poster - Automated Covert Exfiltration</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              bg: '#0d1117',
+              panel: '#161b22',
+              accent: {
+                green: '#4ade80',
+                blue: '#38bdf8',
+              },
+              border: '#30363d',
+            },
+            fontFamily: {
+              sans: ['Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+/* Custom CSS for Neon HOLLOW Effects */
+
+/* Main Title Effect */
+.neon-hollow-title {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px #86efac; 
+  color: transparent;
+  filter: drop-shadow(0 0 2px #4ade80) 
+  drop-shadow(0 0 8px #4ade80) 
+  drop-shadow(0 0 20px rgba(34, 197, 94, 0.8));
+}
+/* Neon Hollow Gold Name */
+.neon-hollow-gold {
+    color: #facc15; /* gold */
+    text-shadow:
+        0 0 1px #facc15,
+        0 0 4px rgba(250, 204, 21, 0.6),
+        0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+        /* Stats Numbers Hollow Effect */
+        .neon-hollow-stat {
+          -webkit-text-fill-color: transparent;
+          -webkit-text-stroke: 1.5px #4ade80;
+          color: transparent;
+          filter: drop-shadow(0 0 2px #4ade80) 
+          drop-shadow(0 0 5px rgba(74, 222, 128, 0.8));
+        }
+
+        /* Neon Border Effect for the Stat Boxes */
+        .neon-box-border {
+          border: 2px solid #4ade80;
+          box-shadow: 0 0 10px rgba(74, 222, 128, 0.6), 
+          inset 0 0 10px rgba(74, 222, 128, 0.2);
+        }
+    </style>
+  </head>
+  <body class="bg-bg text-white font-sans min-h-screen flex justify-center p-5 selection:bg-accent-green selection:text-black">
+
+    <div class="w-[1200px] grid grid-cols-3 gap-4 bg-bg p-6 border border-gray-800 shadow-2xl relative overflow-hidden">
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-64 bg-accent-green/5 blur-[150px] -z-10 pointer-events-none"></div>
+
+      <header class="col-span-3 text-center mb-5 border-b-2 border-accent-green/50 pb-5 relative">
+
+        <div class="flex justify-between items-center mb-2 text-base font-mono">
+          <div>
+            <span class="text-white">Project ID:</span> 
+            <span class="text-accent-green font-bold">FYP02-CS-T2530-0020</span>
+          </div>
+
+          <img src="mmu.png" class="w-[120px]" alt="MMU Logo">
+        </div>
+
+        <h1 class="text-7xl font-extrabold uppercase tracking-widest my-4 leading-none
+                   neon-hollow-title">
+          Automated Covert Exfiltration
+        </h1>
+
+        <h2 class="text-3xl font-light text-white mb-4 tracking-wide mt-3">
+          Designing a Rubber Ducky Payload System for Penetration Testing
+        </h2>
+
+        <div class="text-base text-white leading-relaxed">
+          <p>
+          <span class="text-accent-green font-bold">Student Name & ID:</span> 
+          <span class="text-white">Abdisalam Mohamoud Hussein (1221301995)</span> 
+          <span class="mx-2">|</span> 
+          <span class="text-accent-green font-bold">Supervisor:</span> 
+          <span class="text-white">Ms. Liana Ameerah Binti Rosli</span>
+          </p>
+          <p>
+          <span class="text-accent-green font-bold">Moderator:</span> 
+          <span class="text-white">Dr. Chan Wai Kok</span> 
+          <span class="mx-2">|</span> 
+          <span class="text-accent-green font-bold">Faculty:</span> 
+          <span class="text-white">Faculty of Computing and Informatics</span>
+          </p>
+        </div>
+      </header>
+
+      <!-- Left Column -->
+      <div class="flex flex-col gap-4">
+        <div class="bg-panel border-2 border-accent-blue/70 rounded-xl p-5 shadow-lg shadow-accent-blue/10">
+          <h3 class="border-b border-border pb-2 mb-3 uppercase text-xl font-bold tracking-wide text-accent-green text-center">
+            1. Abstract
+          </h3>
+          <p class="text-base leading-relaxed text-white">
+          Publicly available USB Rubber Ducky payloads are frequently detected and neutralized by modern endpoint defenses like Windows Defender, limiting their effectiveness in penetration testing and red team operations. This project addresses the critical challenge of creating undetectable, automated attack payloads by implementing advanced evasion techniques. A comprehensive Ducky Script was developed that leverages DLL Proxying to bypass real-time antivirus protection, UAC bypass for silent privilege escalation, and automated C2 agent deployment for persistent remote access. The payload successfully evades detection while demonstrating credential exfiltration through App-Bound Encryption bypass, providing a practical tool for security professionals to simulate realistic insider threats and validate organizational defenses.
+          </p>
+        </div>
+
+        <div class="bg-panel border-2 border-accent-blue/70 rounded-xl p-5 shadow-lg shadow-accent-blue/10">
+          <h3 class="border-b border-border pb-2 mb-3 uppercase text-xl font-bold tracking-wide text-accent-green text-center">
+            2. Problem Statement & Objectives
+          </h3>
+          <div class="text-base space-y-4 text-white">
+            <div>
+              <strong class="block text-white mb-1">Problem:</strong>
+              <ul class="list-disc pl-5 space-y-1 marker:text-accent-blue">
+                <li>Publicly available Rubber Ducky payloads are outdated or easily neutralized by modern defenses.</li>
+                <li>Lack of comprehensive scripts simulating advanced persistent threats (APTs).</li>
+                <li>Need for realistic insider threat simulations in security testing.</li>
+              </ul>
+            </div>
+            <div>
+              <strong class="block text-white mb-1">Objectives:</strong>
+              <ul class="list-disc pl-5 space-y-1 marker:text-accent-green">
+                <li>Develop USB payload for automated attack sequence initiation.</li>
+                <li>Implement defense evasion via DLL Proxying to bypass Windows Defender.</li>
+                <li>Execute UAC bypass for privilege escalation.</li>
+                <li>Establish persistence and deploy C2 agent for remote access.</li>
+                <li>Exfiltrate credentials by bypassing App-Bound Encryption (ABE).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-panel border-2 border-accent-blue/70 rounded-xl p-5 shadow-lg shadow-accent-blue/10">
+          <h3 class="border-b border-border pb-2 mb-3 uppercase text-xl font-bold tracking-wide text-accent-green text-center">
+            3. Background Study
+          </h3>
+          <p class="text-base leading-relaxed text-white mb-3">
+          USB Rubber Ducky attacks exploit the trust operating systems place in keyboard devices. Research shows these attacks can type commands much faster than humans, making them hard to detect with traditional antivirus software that looks for known malware patterns.
+          </p>
+          <p class="text-base leading-relaxed text-white mb-3">
+          <strong class="text-accent-green">Current Limitations:</strong> Existing public Rubber Ducky scripts are easily caught by modern Windows Defender. They also fail to demonstrate complete attack scenarios from initial access through to data theft.
+          </p>
+          <p class="text-base leading-relaxed text-white">
+          <strong class="text-accent-green">This Project's Solution:</strong> Combines multiple advanced techniques (DLL side-loading, UAC bypass, credential stealing) into one automated payload that successfully evades Windows 11 security defenses.
+          </p>
+        </div>
+      </div>
+
+      <!-- Middle Column -->
+      <div class="flex flex-col h-full">
+        <div class="bg-panel border-2 border-accent-blue/70 rounded-xl p-5 shadow-lg shadow-accent-blue/10 flex flex-col">
+          <h3 class="border-b border-border pb-2 mb-3 uppercase text-xl font-bold tracking-wide text-accent-green text-center">
+            4. Design (System Architecture)
+          </h3>
+
+          <div class="flex justify-center items-center flex-grow">
+            <img src="design-removebg-preview.png" alt="System Architecture Diagram" class="max-w-full h-auto">
+          </div>
+
+          <div class="mt-4 text-sm text-white space-y-2">
+            <p><strong class="text-white block mb-1 text-[1rem]">Attack Flow:</strong></p>
+            <ol class="list-decimal pl-5 space-y-1">
+              <li>USB insertion triggers Ducky Script keystroke injection</li>
+              <li>PowerShell dropper downloads malicious DLL + legitimate binary</li>
+              <li>DLL Proxying executes encrypted Sliver shellcode</li>
+              <li>Process injection into Edge browser for stealth</li>
+              <li>C2 callback establishes remote access channel</li>
+              <li>Post-exploitation: UAC bypass, persistence, credential theft</li>
+            </ol>
+          </div>
+        </div>
+        <div class="bg-panel border-2 border-accent-blue/70 rounded-xl p-5 shadow-lg shadow-accent-blue/10 mt-5 h-full">
+          <h3 class="border-b border-border pb-2 mb-3 uppercase text-xl font-bold tracking-wide text-accent-green text-center">
+            Acknowledgments
+          </h3>
+
+          <div class="text-sm text-white space-y-3 leading-relaxed">
+            <p>
+            I would like to express sincere appreciation to <strong>Ms. Liana Ameerah Binti Rosli</strong>,
+            the project supervisor, for her continuous guidance, technical insights, and valuable feedback throughout
+            the development of this Final Year Project.
+            </p>
+
+            <p>
+            Appreciation is also extended to <strong>Dr. Chan Wai Kok</strong> for his evaluation input and constructive
+            recommendations, as well as the <strong>Faculty of Computing and Informatics, MMU</strong>, for providing
+            the academic environment and resources necessary to support this work.
+            </p>
+
+            <p>
+            I would also like to thank 
+            <strong class="neon-hollow-gold">Baraa Sameeh Jameel Yousef</strong>
+            for his support, constructive discussions, and assistance during the
+            implementation and testing phases of the project.
+            </p>
+
+
+            <div>
+              <strong class="block text-white mb-1 text-[0.95rem]">Special Thanks:</strong>
+              <ul class="list-disc pl-5 space-y-1 marker:text-accent-blue">
+                <li><strong>Supervisor:</strong> Ms. Liana Ameerah Binti Rosli — guidance and project supervision</li>
+                <li><strong>Moderator:</strong> Dr. Chan Wai Kok — evaluation and recommendations</li>
+                <li><strong>Faculty:</strong> Faculty of Computing and Informatics, MMU</li>
+                <li>
+                  <strong>Peers:</strong>
+                  <span class="neon-hollow-gold font-bold">
+                    Baraa Sameeh Jameel Yousef
+                  </span>
+                  — discussions and technical support
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column -->
+      <div class="flex flex-col gap-4">
+        <div class="bg-panel border-2 border-accent-blue/70 rounded-xl p-5 shadow-lg shadow-accent-blue/10">
+          <h3 class="border-b border-border pb-2 mb-3 uppercase text-xl font-bold tracking-wide text-accent-green text-center">
+            5. Implementation & Testing Results
+          </h3>
+          <div class="mb-4">
+            <h4 class="text-sm uppercase text-white font-bold mb-2">Testing Scorecard (All Tests Passed)</h4>
+            <table class="w-full text-sm border-collapse border border-[#444]">
+              <thead>
+                <tr class="bg-[#21262d] text-left">
+                  <th class="p-2 border border-[#444] text-white">ID</th>
+                  <th class="p-2 border border-[#444] text-white">Test Description</th>
+                  <th class="p-2 border border-[#444] text-white">Status</th>
+                </tr>
+              </thead>
+              <tbody class="text-white">
+                <tr><td class="p-2 border border-[#444]">TC-01</td><td class="p-2 border border-[#444]">Keystroke Injection & UAC Prompt</td><td class="p-2 border border-[#444] text-accent-green font-bold">PASS</td></tr>
+                <tr><td class="p-2 border border-[#444]">TC-02</td><td class="p-2 border border-[#444]">Stager Download & Execution</td><td class="p-2 border border-[#444] text-accent-green font-bold">PASS</td></tr>
+                <tr><td class="p-2 border border-[#444]">TC-03</td><td class="p-2 border border-[#444]">Defense Evasion (DLL Proxying)</td><td class="p-2 border border-[#444] text-accent-green font-bold">PASS</td></tr>
+                <tr><td class="p-2 border border-[#444]">TC-04</td><td class="p-2 border border-[#444]">C2 Session Establishment</td><td class="p-2 border border-[#444] text-accent-green font-bold">PASS</td></tr>
+                <tr><td class="p-2 border border-[#444]">TC-05</td><td class="p-2 border border-[#444]">Credential Exfiltration (ABE Bypass)</td><td class="p-2 border border-[#444] text-accent-green font-bold">PASS</td></tr>
+                <tr><td class="p-2 border border-[#444]">TC-06</td><td class="p-2 border border-[#444]">Persistence via Registry Run Key</td><td class="p-2 border border-[#444] text-accent-green font-bold">PASS</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4 mt-auto">
+            <div class="neon-box-border bg-green-900/10 rounded-lg p-3 text-center">
+              <strong class="block text-5xl leading-none neon-hollow-stat">&lt; 6</strong>
+              <span class="block text-white font-bold text-base my-1">Seconds</span>
+              <small class="text-white text-sm uppercase">Full Chain Execution</small>
+            </div>
+            <div class="neon-box-border bg-green-900/10 rounded-lg p-3 text-center">
+              <strong class="block text-5xl leading-none neon-hollow-stat">100%</strong>
+              <span class="block text-white font-bold text-base my-1">Success</span>
+              <small class="text-white text-sm uppercase">Test Pass Rate</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-panel border-2 border-accent-blue/70 rounded-xl p-5 shadow-lg shadow-accent-blue/10">
+          <h3 class="border-b border-border pb-2 mb-3 uppercase text-xl font-bold tracking-wide text-accent-green text-center">
+            6. Key Implementation Highlights
+          </h3>
+          <ul class="list-disc pl-5 text-base space-y-2 text-white marker:text-accent-blue">
+            <li><strong class="text-white">Technical Stack:</strong> Sliver C2 v1.5.42, PowerShell, Ducky Script, C++ (XOR encryption)</li>
+            <li><strong class="text-white">Defense Evasion:</strong> DLL side-loading via cryptbase.dll, process injection into msedge.exe</li>
+            <li><strong class="text-white">Privilege Escalation:</strong> CmstpElevatedCOM UAC bypass, getsystem to NT AUTHORITY\SYSTEM</li>
+            <li><strong class="text-white">Credential Theft:</strong> ChromeElevator tool bypasses App-Bound Encryption via COM interface hijacking</li>
+            <li><strong class="text-white">Persistence:</strong> Registry Run key auto-execution on user login</li>
+          </ul>
+        </div>
+
+        <div class="bg-panel border-2 border-accent-blue/70 rounded-xl p-5 shadow-lg shadow-accent-blue/10 h-full">
+          <h3 class="border-b border-border pb-2 mb-3 uppercase text-xl font-bold tracking-wide text-accent-green text-center">
+            7. Conclusion & Future Work
+          </h3>
+          <div class="text-base space-y-3 text-white">
+            <div>
+              <strong class="text-white block mb-1">Achievements:</strong>
+              <ul class="list-disc pl-5 space-y-1 marker:text-accent-green text-sm">
+                <li>Successfully demonstrated chained HID attack on Windows 11</li>
+                <li>Bypassed default Windows Defender without triggering alerts</li>
+                <li>Achieved full system compromise (SYSTEM privileges)</li>
+                <li>Validated physical access attack vectors remain critical threat</li>
+              </ul>
+            </div>
+            <div>
+              <strong class="text-white block mb-1">Future Recommendations:</strong>
+              <p class="text-sm text-white mb-2 leading-relaxed">
+              This project successfully demonstrates the feasibility of executing a fully automated,
+              stealthy HID-based attack chain on a modern Windows environment. The results highlight
+              the continued relevance of physical access threats and the limitations of default
+              endpoint security controls when faced with advanced evasion techniques.
+              </p>
+
+              <ul class="list-disc pl-5 space-y-1 marker:text-accent-blue text-sm">
+                <li>Cross-platform support (Linux, macOS)</li>
+                <li>Testing against enterprise EDR solutions</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </body>
+</html>
