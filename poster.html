@@ -39,11 +39,11 @@
 }
 /* Neon Hollow Gold Name */
 .neon-hollow-gold {
-    color: #facc15; /* gold */
-    text-shadow:
-        0 0 1px #facc15,
-        0 0 4px rgba(250, 204, 21, 0.6),
-        0 1px 2px rgba(0, 0, 0, 0.6);
+  color: #facc15; /* gold */
+  text-shadow:
+    0 0 1px #facc15,
+  0 0 4px rgba(250, 204, 21, 0.6),
+  0 1px 2px rgba(0, 0, 0, 0.6);
 }
 
         /* Stats Numbers Hollow Effect */
@@ -287,35 +287,42 @@
           <h3 class="border-b border-border pb-2 mb-3 uppercase text-xl font-bold tracking-wide text-accent-green text-center">
             7. Conclusion & Future Work
           </h3>
+
           <div class="text-base space-y-3 text-white">
+
+            <p class="text-sm text-white leading-relaxed">
+            This project successfully demonstrates the feasibility of executing a fully automated,
+            stealthy HID-based attack chain on a modern Windows environment. By chaining multiple attack
+            stages from initial HID injection to post-exploitation and credential exfiltration, the system
+            highlights how physical access attacks can bypass default endpoint protections when advanced
+            evasion techniques are employed. The results reinforce the continued relevance of physical
+            access threat vectors in modern computing environments.
+            </p>
+
             <div>
               <strong class="text-white block mb-1">Achievements:</strong>
               <ul class="list-disc pl-5 space-y-1 marker:text-accent-green text-sm">
-                <li>Successfully demonstrated chained HID attack on Windows 11</li>
+                <li>Successfully demonstrated a chained HID attack on Windows 11</li>
                 <li>Bypassed default Windows Defender without triggering alerts</li>
-                <li>Achieved full system compromise (SYSTEM privileges)</li>
-                <li>Validated physical access attack vectors remain critical threat</li>
+                <li>Achieved full system compromise with SYSTEM-level privileges</li>
+                <li>Validated that physical access attack vectors remain a critical security threat</li>
               </ul>
             </div>
+            <p class="text-sm text-white leading-relaxed">
+            Overall, the project provides a practical proof-of-concept that can be used by security
+            professionals to better understand, simulate, and assess real-world insider and physical
+            access threats within controlled penetration testing scenarios.
+            </p>
             <div>
               <strong class="text-white block mb-1">Future Recommendations:</strong>
-              <p class="text-sm text-white mb-2 leading-relaxed">
-              This project successfully demonstrates the feasibility of executing a fully automated,
-              stealthy HID-based attack chain on a modern Windows environment. The results highlight
-              the continued relevance of physical access threats and the limitations of default
-              endpoint security controls when faced with advanced evasion techniques.
-              </p>
-
               <ul class="list-disc pl-5 space-y-1 marker:text-accent-blue text-sm">
-                <li>Cross-platform support (Linux, macOS)</li>
-                <li>Testing against enterprise EDR solutions</li>
+                <li>Extend support to additional platforms such as Linux and macOS</li>
+                <li>Evaluate effectiveness against enterprise-grade EDR solutions</li>
               </ul>
             </div>
           </div>
         </div>
-
       </div>
-
     </div>
 
   </body>
